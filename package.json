@@ -1,0 +1,12 @@
+{
+  "name": "slack-test",
+  "version": "1.0.0",
+  "description": "A simple dog website built with TypeScript",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.0"
+  }
+}
