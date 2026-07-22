@@ -1,3 +1,5 @@
+// Done by Slackbot 🤖
+
 interface Dog {
   imageUrl: string;
   name: string;
