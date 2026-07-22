@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Opt-In | Stay in the Loop</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="page-wrapper">
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-content">
+        <span class="badge">🐾 New from DogApp</span>
+        <h1>Stay in the <span class="highlight">Loop</span></h1>
+        <p class="subtitle">Get the latest dog tips, breed spotlights, and exclusive updates delivered straight to your inbox. No spam — just good stuff.</p>
+      </div>
+      <div class="hero-image">
+        <div class="image-placeholder">🐶</div>
+      </div>
+    </section>
+
+    <!-- Opt-In Form -->
+    <section class="form-section">
+      <div class="form-card">
+        <h2>Join the pack</h2>
+        <p class="form-description">Over <strong>10,000 dog lovers</strong> already signed up. Be the next.</p>
+
+        <form id="optInForm" novalidate>
+          <!-- Name -->
+          <div class="form-group">
+            <label for="firstName">First Name</label>
+            <input type="text" id="firstName" name="firstName" placeholder="e.g. Alex" required />
+            <span class="error-msg" id="firstNameError"></span>
+          </div>
+
+          <!-- Email -->
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="e.g. alex@example.com" required />
+            <span class="error-msg" id="emailError"></span>
+          </div>
+
+          <!-- Preferences -->
+          <div class="form-group">
+            <label>I'm interested in… <span class="optional">(optional)</span></label>
+            <div class="checkbox-group">
+              <label class="checkbox-label">
+                <input type="checkbox" name="interests" value="training" />
+                <span>Training Tips</span>
+              </label>
+              <label class="checkbox-label">
+                <input type="checkbox" name="interests" value="nutrition" />
+                <span>Nutrition & Health</span>
+              </label>
+              <label class="checkbox-label">
+                <input type="checkbox" name="interests" value="breeds" />
+                <span>Breed Spotlights</span>
+              </label>
+              <label class="checkbox-label">
+                <input type="checkbox" name="interests" value="events" />
+                <span>Local Events</span>
+              </label>
+            </div>
+          </div>
+
+          <!-- Frequency -->
+          <div class="form-group">
+            <label for="frequency">Email Frequency</label>
+            <select id="frequency" name="frequency">
+              <option value="weekly">Weekly digest</option>
+              <option value="biweekly">Every two weeks</option>
+              <option value="monthly">Monthly roundup</option>
+            </select>
+          </div>
+
+          <!-- GDPR / Consent -->
+          <div class="form-group consent-group">
+            <label class="checkbox-label consent">
+              <input type="checkbox" id="consent" name="consent" required />
+              <span>I agree to receive email communications. I can unsubscribe at any time. Read our <a href="#" class="link">Privacy Policy</a>.</span>
+            </label>
+            <span class="error-msg" id="consentError"></span>
+          </div>
+
+          <button type="submit" class="btn-primary" id="submitBtn">
+            <span class="btn-text">Sign me up 🐾</span>
+            <span class="btn-loading" hidden>Submitting…</span>
+          </button>
+        </form>
+
+        <!-- Success State -->
+        <div class="success-state" id="successState" hidden>
+          <div class="success-icon">✅</div>
+          <h3>You're in!</h3>
+          <p>Thanks for joining the pack. Check your inbox for a confirmation email.</p>
+          <button class="btn-secondary" onclick="resetForm()">Sign up another</button>
+        </div>
+      </div>
+
+      <!-- Trust Signals -->
+      <div class="trust-signals">
+        <div class="trust-item">🔒 <span>100% secure — we never sell your data</span></div>
+        <div class="trust-item">📬 <span>Unsubscribe anytime with one click</span></div>
+        <div class="trust-item">⭐ <span>Loved by 10,000+ dog owners</span></div>
+      </div>
+    </section>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
